@@ -100,6 +100,11 @@
 						"internalType": "address[]",
 						"name": "owners",
 						"type": "address[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "timestamp",
+						"type": "uint256[]"
 					}
 				],
 				"internalType": "struct LandRegistry.Land[]",
@@ -156,6 +161,11 @@
 						"internalType": "address[]",
 						"name": "owners",
 						"type": "address[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "timestamp",
+						"type": "uint256[]"
 					}
 				],
 				"internalType": "struct LandRegistry.Land",

@@ -35,7 +35,7 @@ const Header: React.FC = () => {
                 className="mr-2 my-2"
                 alt="Dojland Logo"
               />
-              Doj-land
+              Doj Land
             </span>
           </Link>
           <div className="flex md:order-2" style={{ marginLeft: "2rem" }}>

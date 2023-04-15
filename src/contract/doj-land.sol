@@ -1,5 +1,4 @@
 // SPDX-License-Identifier: UNLICENSED
-
 pragma solidity ^0.8.17;
 
 contract LandRegistry {
@@ -16,6 +15,7 @@ contract LandRegistry {
         string propertyDim;
         string imageURL;
         address[] owners;
+        uint256[] timestamp;
     }
 
     mapping(address => string) private users;
@@ -43,16 +43,19 @@ contract LandRegistry {
             _locationURL,
             _propertyDim,
             _imageURL,
-            new address[](0)
+            new address[](0),
+            new uint256[](0)
         );
         lands[_id].name.push(_name);
         lands[_id].owners.push(msg.sender);
+        lands[_id].timestamp.push(block.timestamp);
         landsArray.push(lands[_id]);
     }
 
     function transferOwnership(string memory _id, address _to, string memory _name) public {
         Land storage land = lands[_id];
         require(bytes(land.id).length == bytes(_id).length, "Land record not found");
+        land.timestamp.push(block.timestamp);
         land.name.push(_name);
         land.owners.push(_to);
     }
