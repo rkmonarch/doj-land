@@ -29,7 +29,7 @@ const Header: React.FC = () => {
           <Link href="/" className="flex items-center flex-1">
             <span className="flex flex-row items-center self-center text-xl font-bold whitespace-nowrap text-[#9504ff] hover:text-[#a137df] dark:text-[#c26fff]">
               <Image
-                src="/5ire-land.png"
+                src="/Doj-land.png"
                 width="50"
                 height="50"
                 className="mr-2 my-2"
