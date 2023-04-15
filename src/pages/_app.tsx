@@ -5,6 +5,7 @@ import { WagmiConfig } from "wagmi";
 import { client } from "../utils/wagmi";
 import { ConnectKitProvider } from "connectkit";
 import Header from "@/components/navbar";
+import Footer from "@/components/footer";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -16,6 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <Component {...pageProps} />
           </ChakraProvider>
         </div>
+        <Footer />
       </ConnectKitProvider>
     </WagmiConfig>
   );
